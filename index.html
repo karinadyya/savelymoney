@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SavelyMoney — Atur Uang, Sadar Belanja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo"><img src="logo.png" alt="SavelyMoney" class="logo-img"></a>
+    <nav class="nav">
+      <a href="#tentang">Tentang</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#pesan">Pesan</a>
+    </nav>
+    <a href="#pesan" class="btn btn-small">Mulai Sekarang</a>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <!-- animasi dekoratif: uang melayang pelan di latar -->
+  <div class="money-rain" aria-hidden="true">
+    <span>💵</span><span>🪙</span><span>💵</span><span>🪙</span><span>💵</span><span>🪙</span>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Teman kecil buat dompetmu</p>
+      <h1>Sebelum klik "beli", tarik napas dulu.</h1>
+      <p class="hero-desc">
+        SavelyMoney bantu kamu jeda sebentar sebelum belanja, bedain mana yang
+        benar-benar butuh dan cuma pengen, sambil tetap mencatat ke mana saja
+        uangmu pergi tiap bulan.
+      </p>
+      <div class="hero-actions">
+        <a href="#pesan" class="btn btn-primary">Pesan Paketnya</a>
+        <a href="#fitur" class="btn btn-ghost">Coba Fitur</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <p class="hero-card-label">Pengeluaran bulan ini</p>
+      <p class="hero-card-amount">Rp 1.850.000</p>
+      <div class="hero-card-bar"><span style="width:62%"></span></div>
+      <p class="hero-card-note">62% dari anggaran bulanan kamu</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TENTANG ====== -->
+<section id="tentang" class="about">
+  <div class="container about-inner">
+    <div class="about-text">
+      <h2>Uang bukan soal pelit,<br>tapi soal sadar.</h2>
+      <p>
+        Banyak dari kita belanja bukan karena butuh, tapi karena capek, bosan,
+        atau lihat diskon lewat. SavelyMoney dibuat sebagai proyek sederhana
+        untuk membantu mahasiswa dan pekerja muda lebih sadar terhadap
+        kebiasaan belanjanya sendiri — tanpa aplikasi berat atau spreadsheet
+        rumit. Cukup buka, catat, dan pikirkan lagi.
+      </p>
+    </div>
+
+    <div class="about-panel">
+      <div class="about-point">
+        <span class="about-point-icon">😩</span>
+        <div>
+          <h4>Belanja karena emosi</h4>
+          <p>Stres atau bosan sering berakhir di keranjang belanja online.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <span class="about-point-icon">🤔</span>
+        <div>
+          <h4>Susah bedain butuh &amp; pengen</h4>
+          <p>Semua kelihatan penting kalau lagi pengen beli.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <span class="about-point-icon">📉</span>
+        <div>
+          <h4>Gak tahu uang lari ke mana</h4>
+          <p>Akhir bulan baru sadar, tapi catatannya sudah tidak ada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FITUR ====== -->
+<section id="fitur" class="fitur">
+  <div class="container">
+    <h2>Fitur Utama</h2>
+    <p class="section-desc">Klik salah satu kartu di bawah untuk langsung mencobanya.</p>
+
+    <div class="fitur-grid">
+
+      <div class="fitur-card" data-modal="modal-jeda" role="button" tabindex="0" aria-label="Coba fitur Jeda Sebelum Belanja">
+        <span class="fitur-icon">⏳</span>
+        <h3>Jeda Sebelum Belanja</h3>
+        <p>Setiap mau checkout, SavelyMoney kasih jeda singkat supaya kamu
+          sempat mikir dua kali: beneran perlu, atau cuma lapar mata?</p>
+        <span class="fitur-hint">Klik untuk coba</span>
+      </div>
+
+      <div class="fitur-card" data-modal="modal-butuh" role="button" tabindex="0" aria-label="Coba fitur Butuh vs Keinginan">
+        <span class="fitur-icon">⚖️</span>
+        <h3>Butuh vs Keinginan</h3>
+        <p>Setiap pengeluaran bisa ditandai sebagai "butuh" atau "keinginan",
+          biar kamu bisa lihat sendiri pola belanjamu dari waktu ke waktu.</p>
+        <span class="fitur-hint">Klik untuk coba</span>
+      </div>
+
+      <div class="fitur-card" data-modal="modal-anggaran" role="button" tabindex="0" aria-label="Coba fitur Pelacak Anggaran">
+        <span class="fitur-icon">📊</span>
+        <h3>Pelacak Anggaran</h3>
+        <p>Catat pemasukan dan pengeluaran harian, lalu bandingkan dengan
+          anggaran bulanan yang sudah kamu tetapkan sendiri.</p>
+        <span class="fitur-hint">Klik untuk coba</span>
+      </div>
+
+      <div class="fitur-card fitur-card--premium" data-modal="modal-insight" role="button" tabindex="0" aria-label="Coba fitur Insight Pengeluaran Pintar">
+        <span class="fitur-badge">Premium</span>
+        <span class="fitur-icon">✨</span>
+        <h3>Insight Pengeluaran Pintar</h3>
+        <p>Dapatkan ringkasan otomatis kebiasaan belanjamu tiap bulan,
+          lengkap dengan saran hemat yang relevan dengan pola pengeluaranmu.</p>
+        <span class="fitur-hint">Klik untuk coba</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== PEMESANAN ====== -->
+<section id="pesan" class="pesan">
+  <div class="container">
+    <h2>Pilih Paketmu</h2>
+    <p class="section-desc">Tambahkan paket ke keranjang, isi data singkat, lalu kirim pesanan lewat WhatsApp.</p>
+
+    <div class="pesan-layout">
+
+      <!-- Daftar Produk -->
+      <div class="produk-list" id="produk-list">
+
+        <div class="produk-card" data-nama="Paket Dasar" data-harga="0">
+          <div class="produk-info">
+            <h3>Paket Dasar</h3>
+            <p>Pelacak anggaran + fitur jeda belanja. Gratis selamanya.</p>
+          </div>
+          <div class="produk-aksi">
+            <span class="produk-harga">Rp 0</span>
+            <button class="btn btn-small btn-tambah">+ Keranjang</button>
+          </div>
+        </div>
+
+        <div class="produk-card" data-nama="Paket Premium Bulanan" data-harga="15000">
+          <div class="produk-info">
+            <h3>Paket Premium Bulanan</h3>
+            <p>Semua fitur dasar + Insight Pengeluaran Pintar tiap bulan.</p>
+          </div>
+          <div class="produk-aksi">
+            <span class="produk-harga">Rp 15.000</span>
+            <button class="btn btn-small btn-tambah">+ Keranjang</button>
+          </div>
+        </div>
+
+        <div class="produk-card" data-nama="Paket Premium Tahunan" data-harga="150000">
+          <div class="produk-info">
+            <h3>Paket Premium Tahunan</h3>
+            <p>Hemat 2 bulan dibanding paket bulanan. Cocok buat pakai jangka panjang.</p>
+          </div>
+          <div class="produk-aksi">
+            <span class="produk-harga">Rp 150.000</span>
+            <button class="btn btn-small btn-tambah">+ Keranjang</button>
+          </div>
+        </div>
+
+        <div class="produk-card" data-nama="Setup & Konsultasi Anggaran" data-harga="25000">
+          <div class="produk-info">
+            <h3>Setup &amp; Konsultasi Anggaran</h3>
+            <p>Dibantu susun anggaran bulanan pertamamu bareng tim SavelyMoney.</p>
+          </div>
+          <div class="produk-aksi">
+            <span class="produk-harga">Rp 25.000</span>
+            <button class="btn btn-small btn-tambah">+ Keranjang</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Keranjang & Form -->
+      <div class="keranjang-box">
+        <h3>Keranjang Kamu</h3>
+        <ul id="keranjang-items" class="keranjang-items">
+          <li class="keranjang-kosong">Keranjang masih kosong</li>
+        </ul>
+        <div class="keranjang-total">
+          <span>Total</span>
+          <span id="keranjang-total-harga">Rp 0</span>
+        </div>
+
+        <form id="form-pesan" class="form-pesan">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Nama kamu" required>
+
+          <label for="wa">Nomor WhatsApp</label>
+          <input type="tel" id="wa" placeholder="08xxxxxxxxxx" required>
+
+          <label for="catatan">Catatan (opsional)</label>
+          <textarea id="catatan" rows="2" placeholder="Contoh: tolong info cara aktivasi"></textarea>
+
+          <button type="submit" class="btn btn-primary btn-checkout">Checkout via WhatsApp</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 SavelyMoney — Proyek Tugas Mahasiswa</span>
+    <span>Dibuat dengan HTML, CSS &amp; JavaScript</span>
+  </div>
+</footer>
+
+<!-- ====== MODAL FITUR (muncul saat kartu fitur diklik) ====== -->
+<div class="modal-overlay" id="modal-overlay">
+
+  <!-- Modal: Jeda Sebelum Belanja -->
+  <div class="modal-box" id="modal-jeda">
+    <button class="modal-close" aria-label="Tutup">×</button>
+    <h3>⏳ Jeda Sebelum Belanja</h3>
+    <p class="modal-desc">Masukkan barang yang lagi kamu incar, lalu coba jeda sebentar sebelum memutuskan.</p>
+
+    <label for="jeda-nama">Nama Barang</label>
+    <input type="text" id="jeda-nama" placeholder="Contoh: Sepatu baru">
+
+    <label for="jeda-harga">Harga (Rp)</label>
+    <input type="number" id="jeda-harga" placeholder="Contoh: 350000">
+
+    <button class="btn btn-primary" id="jeda-mulai">Mulai Jeda 10 Detik</button>
+    <div class="jeda-hasil" id="jeda-hasil"></div>
+  </div>
+
+  <!-- Modal: Butuh vs Keinginan -->
+  <div class="modal-box" id="modal-butuh">
+    <button class="modal-close" aria-label="Tutup">×</button>
+    <h3>⚖️ Butuh vs Keinginan</h3>
+    <p class="modal-desc">Tulis barang yang mau kamu beli, lalu tandai jujur — ini beneran butuh atau cuma keinginan sesaat?</p>
+
+    <label for="butuh-nama">Nama Barang</label>
+    <input type="text" id="butuh-nama" placeholder="Contoh: Buku kuliah">
+
+    <div class="butuh-aksi">
+      <button class="btn btn-ghost" id="btn-butuh">Butuh</button>
+      <button class="btn btn-ghost" id="btn-keinginan">Keinginan</button>
+    </div>
+
+    <div class="butuh-ringkasan">
+      <span>Butuh: <strong id="jumlah-butuh">0</strong></span>
+      <span>Keinginan: <strong id="jumlah-keinginan">0</strong></span>
+    </div>
+
+    <ul class="butuh-list" id="butuh-list"></ul>
+  </div>
+
+  <!-- Modal: Pelacak Anggaran -->
+  <div class="modal-box" id="modal-anggaran">
+    <button class="modal-close" aria-label="Tutup">×</button>
+    <h3>📊 Pelacak Anggaran</h3>
+    <p class="modal-desc">Atur anggaran bulanan kamu, lalu catat tiap pengeluaran biar tahu sisa uangmu.</p>
+
+    <label for="anggaran-jumlah">Anggaran Bulanan (Rp)</label>
+    <div class="anggaran-set">
+      <input type="number" id="anggaran-jumlah" placeholder="Contoh: 1000000">
+      <button class="btn btn-small" id="anggaran-set-btn">Atur</button>
+    </div>
+
+    <div class="anggaran-progress-wrap">
+      <div class="anggaran-progress-bar" id="anggaran-progress-bar"><span id="anggaran-progress" style="width:0%"></span></div>
+      <p id="anggaran-status">Belum ada anggaran yang diatur.</p>
+    </div>
+
+    <label for="pengeluaran-nama">Tambah Pengeluaran</label>
+    <div class="pengeluaran-input">
+      <input type="text" id="pengeluaran-nama" placeholder="Nama pengeluaran">
+      <input type="number" id="pengeluaran-jumlah" placeholder="Jumlah (Rp)">
+      <button class="btn btn-small" id="pengeluaran-tambah">Tambah</button>
+    </div>
+
+    <ul class="pengeluaran-list" id="pengeluaran-list"></ul>
+  </div>
+
+  <!-- Modal: Insight Pengeluaran Pintar -->
+  <div class="modal-box modal-box--premium" id="modal-insight">
+    <button class="modal-close" aria-label="Tutup">×</button>
+    <span class="fitur-badge">Premium</span>
+    <h3>✨ Insight Pengeluaran Pintar</h3>
+    <p class="modal-desc">Ringkasan otomatis dari data yang kamu isi di Pelacak Anggaran dan Butuh vs Keinginan.</p>
+
+    <button class="btn btn-primary" id="insight-buat">Buat Insight Sekarang</button>
+    <div class="insight-hasil" id="insight-hasil"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
